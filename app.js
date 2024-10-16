@@ -1,4 +1,4 @@
-const apiKey = '376680d13d0d4f19bf9140732241610';
+const apiKey = 'cb9dd3641aef4d779b9142753241610';
 let tempChart;
 const defaultCity = 'Bangladesh'; 
 

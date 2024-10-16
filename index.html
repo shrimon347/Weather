@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <script defer src="app.js"></script>
+
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css"
       rel="stylesheet"
@@ -14,7 +14,9 @@
   <body class="bg-gradient-to-b from-blue-50 to-blue-200">
     <div class="min-h-screen flex items-center justify-center">
       <div class="bg-white p-6 rounded-xl shadow-lg w-full max-w-7xl">
-        <h1 class="text-3xl font-bold text-blue-700 text-center mb-6">Weather Information</h1>
+        <h1 class="text-3xl font-bold text-blue-700 text-center mb-6">
+          Weather Information
+        </h1>
         <div class="flex justify-center gap-4 mb-8">
           <input
             id="city-input"
@@ -43,36 +45,50 @@
 
           <!-- Right side Weather Details -->
           <div class="grid grid-cols-2 gap-4">
-            <div class="p-4 bg-gradient-to-br from-yellow-200 to-yellow-400 rounded-lg shadow text-center">
+            <div
+              class="p-4 bg-gradient-to-br from-yellow-200 to-yellow-400 rounded-lg shadow text-center"
+            >
               <div class="flex items-center gap-2 mb-4 justify-center">
                 <img src="./icon/humidity.png" alt="humidity" class="h-10" />
                 <p class="text-gray-700 font-semibold">Humidity</p>
               </div>
               <h3 class="text-2xl text-blue-700 font-bold humidity">39%</h3>
             </div>
-            <div class="p-4 bg-gradient-to-br from-pink-200 to-pink-400 rounded-lg shadow text-center">
+            <div
+              class="p-4 bg-gradient-to-br from-pink-200 to-pink-400 rounded-lg shadow text-center"
+            >
               <div class="flex items-center gap-2 mb-4 justify-center">
                 <img src="./icon/uv-index.png" alt="uv-index" class="h-10" />
                 <p class="text-gray-700 font-semibold">UV Index</p>
               </div>
               <h3 class="text-2xl text-pink-700 font-bold uv-index">0 of 10</h3>
             </div>
-            <div class="p-4 bg-gradient-to-br from-orange-200 to-orange-400 rounded-lg shadow text-center">
+            <div
+              class="p-4 bg-gradient-to-br from-orange-200 to-orange-400 rounded-lg shadow text-center"
+            >
               <div class="flex items-center gap-2 mb-4 justify-center">
                 <img src="./icon/beach.png" alt="sunset" class="h-10" />
                 <p class="text-gray-700 font-semibold">Sunset</p>
               </div>
               <h3 class="text-2xl text-orange-700 font-bold sunset">7:50 pm</h3>
             </div>
-            <div class="p-4 bg-gradient-to-br from-purple-200 to-purple-400 rounded-lg shadow text-center">
+            <div
+              class="p-4 bg-gradient-to-br from-purple-200 to-purple-400 rounded-lg shadow text-center"
+            >
               <div class="flex items-center gap-2 mb-4 justify-center">
                 <img src="./icon/sunrise.png" alt="sunrise" class="h-10" />
                 <p class="text-gray-700 font-semibold">Sunrise</p>
               </div>
-              <h3 class="text-2xl text-purple-700 font-bold sunrise">6:35 am</h3>
+              <h3 class="text-2xl text-purple-700 font-bold sunrise">
+                6:35 am
+              </h3>
             </div>
-            <div class="col-span-2 p-4 bg-gradient-to-br from-green-200 to-green-400 rounded-lg shadow text-center">
-              <p class="text-lg font-semibold text-gray-700">Monthly Rainfall</p>
+            <div
+              class="col-span-2 p-4 bg-gradient-to-br from-green-200 to-green-400 rounded-lg shadow text-center"
+            >
+              <p class="text-lg font-semibold text-gray-700">
+                Monthly Rainfall
+              </p>
               <h3 class="text-2xl text-green-700 font-bold rainfall">45mm</h3>
             </div>
           </div>
@@ -81,11 +97,12 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
           <!-- Temperature Chart -->
           <div class="p-6 bg-gray-100 rounded-lg shadow-md">
-            <h2 class="text-xl font-bold text-blue-700 mb-4">Temperature Chart</h2>
+            <h2 class="text-xl font-bold text-blue-700 mb-4">
+              Temperature Chart
+            </h2>
             <canvas id="tempChart"></canvas>
           </div>
 
-          
           <div class="p-6 bg-gray-100 rounded-lg shadow-md">
             <h2 class="text-xl font-bold text-blue-700 mb-4">7-Day Forecast</h2>
             <div id="forecast" class="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -95,5 +112,6 @@
         </div>
       </div>
     </div>
+    <script src="/app.js"></script>
   </body>
 </html>
