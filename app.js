@@ -1,12 +1,12 @@
-const apiKey = '59da56aeb719466a90f121127241510';
+const apiKey = '376680d13d0d4f19bf9140732241610';
 let tempChart;
-const defaultCity = 'Bangladesh';
-const corsProxy = 'https://cors-anywhere.herokuapp.com/';  
+const defaultCity = 'Bangladesh'; 
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('city-input').value = defaultCity; 
     getWeather();
 });
+
 
 async function getWeather() {
     const city = document.getElementById('city-input').value;
@@ -16,13 +16,15 @@ async function getWeather() {
     }
 
     try {
-        const response = await fetch(`${corsProxy}https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=no`);
+        const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=no`);
         
         if (!response.ok) {
             throw new Error('City not found');
         }
 
         const data = await response.json();
+        console.log(data);
+        
         updateUI(data);
         updateChart(data.forecast.forecastday); 
         updateForecast(data.forecast.forecastday); 
@@ -42,6 +44,7 @@ function updateUI(data) {
     document.querySelector('.sunrise').textContent = data.forecast.forecastday[0].astro.sunrise;
     document.querySelector('.rainfall').textContent = `${data.current.precip_mm} mm`;
 }
+
 
 function formatTime(localtime) {
     const timeParts = localtime.split(' ');
@@ -81,6 +84,7 @@ function updateChart(forecastDays) {
     });
 }
 
+
 function updateForecast(forecastDays) {
     const forecastContainer = document.getElementById('forecast');
     forecastContainer.innerHTML = ''; 
@@ -102,3 +106,4 @@ function updateForecast(forecastDays) {
         forecastContainer.appendChild(forecastCard);
     });
 }
+
